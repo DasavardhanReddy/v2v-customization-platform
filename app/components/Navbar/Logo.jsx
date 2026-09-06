@@ -11,6 +11,7 @@ export default function Logo(){
                 height={60}
             />
         </Link>
+    )
   
     
 }

@@ -7,7 +7,7 @@ const navLinks = [
     }, 
     {
         name:"Browse Parts",
-        href:" /browse",
+        href:"/browse",
     },
     {
         name:"Vehicle",
@@ -15,7 +15,7 @@ const navLinks = [
     },
     {
         name:" Workshop",
-        href: " /workshop",
+        href: "/workshop",
     },
     {
         name:"About",
@@ -30,7 +30,7 @@ const navLinks = [
 
 export default function NavLinks() {
     return (
-        <>
+        <div className="flex gap-8">
             {
                 navLinks.map(function(link){
 
@@ -38,6 +38,7 @@ export default function NavLinks() {
                     <Link
                     key={link.href}
                     href={link.href}
+                    className="text-gray-700 font-medium hover:text-blue-600 transition-colors"
                     >
                         {link.name}
                     </Link>
@@ -46,6 +47,6 @@ export default function NavLinks() {
                 )
                 
             }
-        </>
+        </div>
     );
 }
