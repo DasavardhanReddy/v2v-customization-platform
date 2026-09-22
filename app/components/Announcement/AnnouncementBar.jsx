@@ -6,6 +6,7 @@ import announcements from "./announcement";
 export default function AnnouncementBar() {
 
     const [currentAnnouncement, setCurrentAnnouncement] = useState(0);
+    const currentOffer = announcements[currentAnnouncement];
     const [isAnimating, setIsAnimating] = useState(false);
     useEffect(() => {
     const interval = setInterval(() => {
@@ -37,7 +38,7 @@ export default function AnnouncementBar() {
                 {isAnimating ? "Animating" : "Idle"}
             </p>
         </div>
-        {/* Vehicle Image
+        {/* Vehicle Image*/}
         <div className="relative h-64 w-[500px]">
             <Image
                 src={announcements[currentAnnouncement].image}
@@ -45,7 +46,7 @@ export default function AnnouncementBar() {
                 fill
                 className="object-contain"
             />
-        </div> */}
+        </div> 
 
         {/* Counter */}
         <span className="text-sm text-slate-400">
